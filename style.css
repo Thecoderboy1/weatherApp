@@ -90,4 +90,16 @@ main {
     border: none;
     outline: none;
     padding-top: 4px;
+/*     transition: background .5s ease-in; */
+    transition: background 0.5s ease-in-out;
+
+}
+.btn-div button:hover {
+    background: linear-gradient(135deg, #4D90E3, #002366);
+}
+
+/* Click effect */
+.btn-div button:active {
+    transform: translateY(2px); /* Add a slight downward shift when clicked */
+    background: linear-gradient(135deg, #002366, #4D90E3);
 }
