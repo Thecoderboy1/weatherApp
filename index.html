@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="diloboxAnimation.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <main id="main">
+        <div class="outputOverlay slide-right" id="outputOverlay">
+            <div class="dilog-heading">
+                <div class="back-btn">
+                    <span class="material-symbols-outlined" id="back-btn">
+                        arrow_back
+                    </span>
+                </div>
+                <div class="name">
+                    <span>weather App</span>
+                </div>
+            </div>
+            <div class="clouds">
+                <img src="images/clear.png"  id="weather-pic">
+            </div>
+            <div class="temp-area">
+                <span class="temp-text" id="temprature">13&deg;C</span>
+            </div>
+            <div class="cloud-info">
+                <span class="cloud-info" id="cloud-info">Broken Clouds</span>
+            </div>
+            <div class="location-div">
+                <div class="location-icon">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                </div>
+                <div class="location-txt">
+                    <span class="location" id="location">Daltonganj,India</span>
+                </div>
+            </div>
+            <div class="temp-humidity">
+                <div class="temp2">
+                    <span>
+                        <img src = "images/wind.png"
+                    </span>
+                    <span id="wind-speed">12C</span>
+                </div>
+
+                <div class="hum-div">
+                    <span class="material-symbols-outlined">
+                        humidity_percentage
+                    </span>
+                    <span id="humidity-text">75%</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="appInterface" id="appInterface">
+            <div class="heading">
+                <span>Weather App</span>
+            </div>
+
+            <div class="appInputArea">
+                <div class="inputFeild">
+                    <input type="text" id="city-name" placeholder="Enter your city name">
+                </div>
+                <div class="btn-div">
+                    <button id="getWeather">Get Weather</button>
+                </div>
+            </div>
+        </div>
+        <div class="error slide-right" id="error-box">
+            <div class="output">
+                <div class="err-heading">
+                    <span>Error</span>
+                </div>
+                <span class="error-msg" id="err-txt">
+                    invalid City name
+                </span>
+            </div>
+            <div class="controls">
+                <span class="material-symbols-outlined" id="close-btn">
+                    close
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="logic.js"></script>
+</body>
+
+</html>

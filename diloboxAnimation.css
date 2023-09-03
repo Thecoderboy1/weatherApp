@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.outputOverlay {
+    width: 350px;
+    height: 500px;
+    /* background-color: linear-;  */
+    /* background-color: white;  */
+    /* background-image: linear-gradient(#002366,#4D90E3); */
+    background: linear-gradient(135deg, #002366, #4D90E3);
+    color: white;
+    position: absolute;
+    box-shadow: rgba(6, 6, 20, 0.25) 0px 13px 27px -5px, rgba(15, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    z-index: 2;
+}
+
+.dilog-heading {
+    display: flex;
+    border-bottom: 1px solid white;
+    align-items: center;
+    padding: 15px 10px;
+    /* color: rgb(107, 107, 228); */
+    color: white;
+}
+
+.back-btn {
+
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.back-btn span {
+    font-weight: bolder;
+}
+
+.name {
+    margin-left: 10px
+}
+
+.name span {
+    font-weight: bold;
+    font-size: 20px
+}
+
+#back-btn {
+    cursor: pointer;
+}
+
+.clouds {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: cetner;
+    margin-top: 15px;
+}
+
+.clouds img {
+    width: 180px;
+}
+
+.temp-area {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.temp-area span {
+    font-size: 4.5rem;
+    font-weight: bolder;
+
+}
+
+.cloud-info {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.location-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 18px 0;
+    position: relative;
+}
+
+.location-icon {
+    padding: -7px 0 0 0;
+}
+
+.location {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.temp-humidity {
+    width: 100%;
+    display: flex;
+    position: relative;
+    border-top: 1px solid white;
+    height: 70px;
+}
+
+.temp2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+    width: 50%;
+    height: 100%;
+}
+
+.temp2 span {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.temp2 span img {
+    width: 20px;
+    /* background-color: blue; */
+}
+
+.hum-div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hum-div span {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+/* ==============creating the error dilog box======================== */
+.error {
+    width: 250px;
+    height: 130px;
+    background: linear-gradient(135deg, #002366, #4D90E3);
+    box-shadow: rgba(6, 6, 20, 0.25) 0px 13px 27px -5px, rgba(15, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    display: none;
+    color: white;
+}
+
+.output {
+    width: 200px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 25px;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.err-heading {
+    width: 250px;
+    border-bottom: 1px solid white;
+    position: absolute;
+    top: 0px;
+    left: -26px;
+    /* padding-bottom: 5px; */
+    padding: 5px 0 5px 15px;
+    font-size: 18px;
+    /* z-index: -1; */
+}
+
+.controls {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all .5s ease;
+    /* margin-top: 5px; */
+    margin: 3px 5px 0 0;
+    z-index: 1000;
+
+}
+
+.controls:hover {
+    background-color: #4d90e344;
+
+}
+ 
+/* ====================creating animation========
+ */
+.slide-right {
+    animation: slide-right .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.slide-left {
+    animation: slide-left .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
